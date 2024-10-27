@@ -1,5 +1,4 @@
-import { CompoundCondition, createInterpreter, FieldCondition } from '@ucast/core';
-
+const { createInterpreter } = require('@ucast/core');
 
 const interpreter = createInterpreter({
   // Logical Operators

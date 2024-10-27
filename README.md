@@ -8,12 +8,15 @@ I remembered stalniy's CASL library, and cuz I always look deeply... I knew the 
 
 # Usage example
 ```JavaScript
+const { CompoundCondition, FieldCondition } = require('@ucast/core');
+const ast2mongo = require('./index');
+
 const condition = new CompoundCondition('and', [
-  new FieldCondition('gt', 'x', 5),
-  new FieldCondition('lt', 'y', 10),
+    new FieldCondition('gt', 'x', 5),
+    new FieldCondition('lt', 'y', 10),
 ]);
 
-const ast2mongo = require('index');
-
 const mongoQuery = ast2mongo(condition)
+
+console.log('mongoQuery', JSON.stringify(mongoQuery, null, 2));
 ```
