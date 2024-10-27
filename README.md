@@ -1,4 +1,4 @@
-#ast2mongo
+# ast2mongo
 Transforms ucast's AST conditions into a valid mongodb query.
 
 # Motivation
